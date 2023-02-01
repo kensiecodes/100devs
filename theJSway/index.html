@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js tests</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--chapter one-->
+    <h1>Chapter One (3, 2, 1... code!)</h1>
+
+    <div class="block">
+        <a id="presentation">Presentation</a>
+        <p>Console logs stored variables name and age.</p>
+        <span>
+            <ul>
+                <li>#console</li>
+                <li>#variables</li>
+            </ul>
+        </span>
+    </div>
+
+    <div class="block">
+        <a id="calculator">Minimalistic Calculator</a>
+        <p>Console logs various equations with 6 and 3 using arithmetic operators</p>
+        <span>
+            <ul>
+                <li>#arithmetic-operators</li>
+                <li>#console</li>
+            </ul>
+        </span>
+    </div>
+
+    <!-- chapter two-->
+
+    <h1>Chapter Two (Play with variables)</h1>
+
+    <div class="block">
+        <a id="improvedhello">Improved Hello</a>
+        <p>Uses <code>prompt()</code> and <code>alert()</code> to get the user's full name and give a custom greeting.</p>
+        <span>
+            <ul>
+                <li>#prompt-user</li>
+                <li>#template-literal</li>
+                <li>#page-alerts</li>
+            </ul>
+        </span>
+    </div>
+
+    <div class="block">
+        <a id="vatcalc">VAT Calculation</a>
+        <p>Prompts user for an amount and console logs the given amount plus the appropriate VAT rate (20.6%).</p>
+        <span>
+            <ul>
+                <li>#prompt-user</li>
+                <li>#template-literal</li>
+                <li>#arithmetic-operators</li>
+            </ul>
+        </span>
+    </div>
+
+    <div class="block">
+        <a>Celcius to Farhenheit</a>
+        <form action="">
+            <label for="celciusInput"> Celcius: </label>
+            <input id="celciusInput" type="text" placeholder="celcius">
+        </form>
+        <a id="calcCelcius" type="button" name="button">Convert</button>
+        <h2 id="fahrenheit"></h2>
+        <p>User enters celcius value, clicks input button, and a function returns the converted farhenheit value to an h2.</p>
+        <span>
+            <ul>
+                <li>#arithmetic-operators</li>
+                <li>#DOM-modifying</li>
+            </ul>
+        </span>
+    </div>
+
+
+    <!-- chapter three -->
+
+    <h1>Chapter Three (Add conditions)</h1>
+
+    <div class="block">
+        <a >Following day</a>
+        <form action="">
+            <label for="currentDay"> Current day: </label>
+            <input id="currentDay" type="text" placeholder="current day">
+        </form>
+        <a id="dayInput">What's the next day?</a>
+        <h2 id="nextDay"></h2>
+    <p>The user enters a day, and a set of conditional statements returns the correct following day. Accounts for capitalization and incorrect input.</p>
+    <span>
+        <ul>
+            <li>#nested-conditionals</li>
+            <li>#input-validation</li>
+            <li>#default-case</li>
+        </ul>
+    </span>
+    </div>
+
+
+    <div class="block">
+        <a >Number comparison</a>
+        <form action="">
+            <label for="numOneInput"> Enter first number: </label>
+            <input id="numOneInput" type="text" placeholder="First Number">
+        </form>
+        <form action="">
+            <label for="numTwoInput"> Enter second number: </label>
+            <input id="numTwoInput" type="text" placeholder="Second Number">
+        </form>
+        <a id="compareNum">Compare Numbers</a>
+        <h2 id="resultCompareNum"></h2>
+
+        <p>User enters two numbers, program returns their comparison, or an error if the values are not numbers.</p>
+
+        <span>
+            <ul>
+                <li>#multi-input</li>
+                <li>#input-validation</li>
+                <li>#nested-conditional</li>
+                <li>#template-literal</li>
+            </ul>
+        </span>
+    </div>
+
+    <!-- Chapter four -->
+
+    <h1>Chapter Four (Repeat Statements)</h1>
+
+    <div class="block">
+        <a id="startFizzBuzz">FizzBuzz</a>
+        <p>Console logs FizzBuzz!</p>
+        <span>
+            <ul>
+                <li>#for-loops</li>
+                <li>#else-if-conditional</li>
+                <li>#modulo</li>
+            </ul>
+        </span>
+        
+
+    </div>
+
+
+    <!--script imports-->
+
+    <script src="chapter1.js"></script>
+    <script src="chapter2.js"></script>
+    <script src="chapter3.js"></script>
+    <script src="chapter4.js"></script>
+
+</body>
+</html>

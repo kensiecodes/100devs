@@ -38,31 +38,75 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-
+    let filtered = inventors.filter(element => element.year >= 1500 && element.year < 1600)
+    console.log('Filtered array (returning only inventors born in 1500s): ')
+    console.table(filtered)
     
-
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+    let mapped = inventors.map(element => element.first + ' ' + element.last )
+    console.log('Mapped array (joined first and last names): ')
+    console.table(mapped)
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-
+    let sorted = inventors.sort((a, b) => a.year - b.year)
+    console.log('Sorted array (in order of birth year): ')
+    console.table(sorted)
+    
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    let yearsLived = inventors.map(element => element.passed - element.year)
+    let reduced = yearsLived.reduce((a,b) => a + b, 0)
+    console.log('Reduced array (how many years the inventors lived total): ')
+    console.log(reduced)
 
     // 5. Sort the inventors by years lived
+    let sortedLived = inventors.sort(function (a, b) {
+      let aLived = a.passed - a.year
+      let bLived = b.passed -  b.year
+      return aLived > bLived ? 1 : aLived < bLived ? -1 : 0;
+      //(element => element.passed - element.year)
+    })
+    console.log('Sorted by age when passing, in ascending order: ')
+    console.table(sortedLived)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+    /*
+    const category = document.querySelector('.mw-category')
+    const links = Array.from(category.querySelectorAll('a'))
+
+    const de = links
+                .map(link => link.textContent)
+                .filter(streetName => streetName.includes('de'))
+
+                //input this into wikipedia console 
+    */
 
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    people.sort()
+    console.log('People, alphabetically sorted')
+    console.log(people)
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    
+    const sumVehicles = data.reduce(function(obj, item) {
+      if(!obj[item]) {
+        obj[item] = 0
+      }
+      obj[item]++
+      return obj
+    }, {})
+    console.log('How often each vehicle occurs in an array: ')
+    console.log(sumVehicles)
+      //blank object is the accumulator
   </script>
 </body>
 </html>
